@@ -5,7 +5,7 @@ int length = collection.Length;
 int index = 0;
 while (index < length)
 {
-    collection[index] = new Random().Next(1,100);
+    collection[index] = new Random().Next(1,10);
     index++;
 }
 }
@@ -22,7 +22,28 @@ void writearay(int[] col)
     }
 }
 
-//int [] aray = new int[5];
-int [] aray = {1, 2, 3, 4, 5, 6, 7, 8};
-//fillaray(aray);
+int Indexoff( int[] collection, int find)
+{
+    int count = collection.Length;
+    int index = 0;
+    int positon = -1;
+    while (index < count)
+    {
+        if (collection[index] == find)
+        {
+            positon = index;
+            break;
+        }
+        index++;
+    }
+    return positon;
+}
+
+int [] aray = new int[10];
+
+fillaray(aray);
 writearay(aray);
+Console.WriteLine();
+
+int pos = Indexoff(aray, 40);
+Console.WriteLine(pos);
