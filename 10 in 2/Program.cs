@@ -1,16 +1,16 @@
-﻿void fillbin(int x)
+﻿void fillbin(int x, int y)
 {
-    int index = 0;
+    //int index = 0;
     while( x != 0)
     {
-        int rez = (x % 2);
-        x = x/2;
-        Console.Write(rez);
-        index++;
+        Console.Write(x % y);
+        x = x/y;
+        //index++;
     }
 } 
 
-
-Console.Write("Введите десятичное число: ");
+Console.Write("Введите целое десятичное число: ");
+int count = int.Parse(Console.ReadLine());
+Console.Write("Введите разрядность: ");
 int des = int.Parse(Console.ReadLine());
-fillbin(des);
+fillbin(count, des);
